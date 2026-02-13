@@ -6,19 +6,23 @@ import 'swiper/css/pagination';
 
 import './styles.css';
 
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import slider1 from '../../../assets/SLider1.jpg';
 import slider2 from '../../../assets/Slider2.jpg';
 import slider3 from '../../../assets/Slider3.jpg';
 
 export default function Slider() {
   return (
-    <>
+    <div className="slider-wrapper">
       <Swiper
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -31,6 +35,7 @@ export default function Slider() {
           <img src={slider3} alt="Slider 3" />
         </SwiperSlide>
       </Swiper>
-    </>
+      <div className="slider-fade"></div>
+    </div>
   );
 }
