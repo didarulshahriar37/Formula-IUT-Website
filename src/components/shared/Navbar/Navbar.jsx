@@ -25,7 +25,7 @@ const Navbar = () => {
     href: "/",
     text: "Home"
   }, {
-    href: "#about",
+    href: "/about",
     text: "About"
   }, {
     href: "#services",
