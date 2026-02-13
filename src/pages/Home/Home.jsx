@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from './Slider/Slider';
 import Intro from './Intro/Intro';
 
 const Home = () => {
+    useEffect(() => {
+        document.title = 'FormulaIUT | Home';
+    }, []);
+
     return (
         <div className='bg-black pb-9'>
             <div className='w-full bg-black'>

@@ -16,7 +16,7 @@ export default function Slider() {
     <div className="slider-wrapper">
       <Swiper
         autoplay={{
-          delay: 3500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{

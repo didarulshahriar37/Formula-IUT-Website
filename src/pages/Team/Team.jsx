@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TeamPhoto from "../../assets/SLider2.jpg"
 
 const Team = () => {
+    useEffect(() => {
+        document.title = 'FormulaIUT | Team';
+    }, []);
+
     return (
         <div className='bg-black'>
             <div className='relative w-full h-svh min-h-80'>

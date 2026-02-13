@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AboutUs from "../../assets/SLider2.jpg"
 import whoWeAre from "../../assets/Slider3.jpg"
 
 const About = () => {
+    useEffect(() => {
+        document.title = 'FormulaIUT | About Us';
+    }, []);
+
     return (
         <div className='bg-black'>
             <div className='relative w-full h-svh min-h-80'>
