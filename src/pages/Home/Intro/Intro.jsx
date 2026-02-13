@@ -3,7 +3,7 @@ import whoWeAre from "../../../assets/SLider2.jpg";
 
 const Intro = () => {
     return (
-        <div className='w-9/12 mx-auto space-y-16 md:space-y-24'>
+        <div className='md:w-9/12 mx-auto space-y-16 md:space-y-24'>
             <div>
                 <div className='flex flex-col md:flex-row items-stretch gap-8 md:gap-12 lg:gap-16'>
                     <div className='w-full md:w-7/12 h-full'>
