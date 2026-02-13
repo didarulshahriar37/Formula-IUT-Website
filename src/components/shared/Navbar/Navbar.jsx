@@ -38,7 +38,7 @@ const Navbar = () => {
     text: "Contact Us"
   }];
   return <header className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-transparent bg-linear-to-b from-black to-black/0' : 'bg-transparent bg-linear-to-b from-black to-black/0'}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-10xl pt-5 md:pt-0">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
           <div>
             <Link to="/">
@@ -46,13 +46,13 @@ const Navbar = () => {
             </Link>
           </div>
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
-            {navLinks.map(link => <a key={link.text} href={link.href} className="text-sm lg:text-base font-bold text-white hover:text-red-500 transition-colors relative group">
+            {navLinks.map(link => <a key={link.text} href={link.href} className="text-lg lg:text-base font-bold text-white hover:text-red-500 transition-colors relative group">
                 {link.text}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </a>)}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-md transition-colors" aria-label="Toggle menu">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-white hover:bg-gray-100 rounded-md transition-colors" aria-label="Toggle menu">
             {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
