@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
 import AboutUs from "../../assets/SLider2.jpg"
 import whoWeAre from "../../assets/Slider3.jpg"
 
@@ -7,13 +8,23 @@ const About = () => {
         document.title = 'FormulaIUT | About Us';
     }, []);
 
+    const scrollToSection = () => {
+        const section = document.getElementById('about-content');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className='bg-black'>
             <div className='relative w-full h-svh min-h-80'>
                 <img src={AboutUs} alt="" className='w-full h-full object-cover' />
                 <div className='absolute left-0 right-0 bottom-0 h-1/3 bg-linear-to-b from-transparent to-black pointer-events-none'></div>
+                <button type="button" onClick={scrollToSection} className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-white">
+                    <ChevronDown className="scroll-arrow w-9 h-9 md:w-10 md:h-10" />
+                </button>
             </div>
-            <div className='px-5 md:px-0 pb-16'>
+            <div id="about-content" className='px-5 md:px-0 pb-16'>
                 <div>
                     <h2 className='text-4xl md:text-6xl font-extrabold text-white text-center mt-20 mb-20 w-11/12 mx-auto'>About Us</h2>
                 </div>

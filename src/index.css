@@ -27,3 +27,22 @@ body {
 main {
     flex: 1;
 }
+
+.scroll-arrow {
+    animation: scrollFade 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollFade {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(6px);
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+}

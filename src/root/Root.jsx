@@ -1,9 +1,15 @@
-import React from 'react';
-import { Outlet } from 'react-router';
+import React, { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router';
 import Navbar from '../components/shared/Navbar/Navbar';
 import Footer from '../components/shared/Footer/Footer';
 
 const Root = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, [location.pathname]);
+
     return (
         <div>
             <header>
