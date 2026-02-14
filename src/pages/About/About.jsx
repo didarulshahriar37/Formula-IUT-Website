@@ -4,10 +4,13 @@ import AboutUs from "../../assets/SLider2.jpg"
 import whoWeAre from "../../assets/Slider3.jpg"
 
 const About = () => {
+
+    // Dynamic Title handling
     useEffect(() => {
         document.title = 'FormulaIUT | About Us';
     }, []);
 
+    // Scroll to content when the down-arrow is clicked
     const scrollToSection = () => {
         const section = document.getElementById('about-content');
         if (section) {
@@ -17,18 +20,25 @@ const About = () => {
 
     return (
         <div className='bg-black'>
+
+            {/* Hero Image */}
             <div className='relative w-full h-svh min-h-80'>
                 <img src={AboutUs} alt="" className='w-full h-full object-cover' />
                 <div className='absolute left-0 right-0 bottom-0 h-1/3 bg-linear-to-b from-transparent to-black pointer-events-none'></div>
+                
+                {/* Down Arrow */}
                 <button type="button" onClick={scrollToSection} className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-white">
                     <ChevronDown className="scroll-arrow w-9 h-9 md:w-10 md:h-10" />
                 </button>
             </div>
+
+            {/* Content: About Us */}
             <div id="about-content" className='px-5 md:px-0 pb-16'>
                 <div>
                     <h2 className='text-4xl md:text-6xl font-extrabold text-white text-center mt-20 mb-20 w-11/12 mx-auto'>About Us</h2>
                 </div>
                 <div className='w-full md:max-w-8/12 mx-auto'>
+                    {/* Our Mission */}
                     <h2 className='text-2xl md:text-4xl font-bold text-center pb-5 border-b-3 border-red-500 mb-10'>Our Mission</h2>
                     <div>
                         <p className='text-base md:text-lg text-center'>The University of Western Australia Motorsport Team (UWAM) is a group of diverse and dedicated students that work together to design, build and test an electric formula-style vehicle to participate in the Formula SAE competition. The team strive for excellence each year with five core values in mind:</p>
@@ -36,7 +46,8 @@ const About = () => {
                     </div>
                     <div className='space-y-16 md:space-y-24'>
                         <div>
-                            <div className='flex flex-col md:flex-row items-stretch gap-8 md:gap-12 lg:gap-16'>
+                            <div className='flex flex-col md:flex-row items-stretch gap-8 md:gap-12 lg:gap-16'>  
+                                {/* Who We Are */}
                                 <div className='w-full md:w-7/12 h-full'>
                                     <img src={whoWeAre} alt="" className='w-full h-full object-cover' />
                                 </div>
@@ -47,6 +58,7 @@ const About = () => {
                             </div>
                         </div>
                         <div>
+                            {/* Message from project manager */}
                             <div className='flex flex-col-reverse md:flex-row items-stretch gap-8 md:gap-12 lg:gap-16'>
                                 <div className='w-full md:w-7/12'>
                                     <h2 className='text-white text-2xl font-bold mb-4'>A Message from our Project Manager</h2>
@@ -54,6 +66,7 @@ const About = () => {
                                     <p className='text-base text-justify md:text-lg leading-relaxed text-gray-200 mb-4'>All aspects of our team functionality are managed by students. This presents a fantastic opportunity for self-development, which generally wouldn't be available to students until later in their careers. The volunteer aspect of the project requires students to develop strong interpersonal skills to influence and motivate others, as well as to establish good relationships and mutual respect in order to lead and manage effectively.</p>
                                     <p className='text-base text-justify md:text-lg leading-relaxed text-gray-200'>We hope to provide an opportunity for sponsors to contribute to the future of engineers and business professionals, through investing in our students who will develop these technologies for the rest of their careers.</p>
                                 </div>
+                                {/* Project Manager info */}
                                 <div className='w-full md:w-4/12 h-full'>
                                     <img src={whoWeAre} alt="" className='w-full h-full object-cover mt-12' />
                                     <h2 className='text-3xl font-bold mt-15'>Name</h2>

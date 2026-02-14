@@ -10,30 +10,28 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    children: [
-        {
-            index: true,
-            path: "/",
-            Component: Home
-        },
-        {
-          path: "/about",
-          Component: About
-        },
-        {
-          path: "/team",
-          Component: Team
-        },
-        {
-          path: "/contact",
-          Component: Contact
-        },
-        {
-          path: "/*",
-          Component: Error
-        }
-    ],
+    children: [{
+      index: true,
+      path: "/",
+      Component: Home
+    },
+    {
+      path: "/about",
+      Component: About
+    },
+    {
+      path: "/team",
+      Component: Team
+    },
+    {
+      path: "/contact",
+      Component: Contact
+    }],
   },
+  {
+    path: "/*",
+    Component: Error
+  }
 ]);
 
 export default router;

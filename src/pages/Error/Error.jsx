@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 const Error = () => {
     const navigate = useNavigate();
 
+    // Dynamic title handling and lottie animation handling
     useEffect(() => {
         document.title = 'FormulaIUT | Error';
         const existing = document.getElementById('lottie-player-script');
@@ -19,6 +20,7 @@ const Error = () => {
     return (
         <div className="min-h-screen bg-black text-white flex items-center justify-center px-4 py-16">
             <div className="w-full max-w-5xl grid gap-10 md:grid-cols-2 items-center">
+                {/* Lottie Animation */}
                 <div className="flex justify-center md:justify-start">
                     <lottie-player
                         src="/Search.json"
@@ -29,6 +31,7 @@ const Error = () => {
                         class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-64 sm:h-72 md:h-80 lg:h-96"
                     ></lottie-player>
                 </div>
+                {/* Error texts */}
                 <div className="text-center md:text-left space-y-4">
                     <h1 className="text-4xl md:text-6xl font-extrabold">Page Not Found</h1>
                     <p className="text-base md:text-lg text-gray-300">The page you are looking for doesn’t exist or was moved.</p>

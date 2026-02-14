@@ -6,6 +6,7 @@ import Footer from '../components/shared/Footer/Footer';
 const Root = () => {
     const location = useLocation();
 
+    // Scroll to top after changing route
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }, [location.pathname]);

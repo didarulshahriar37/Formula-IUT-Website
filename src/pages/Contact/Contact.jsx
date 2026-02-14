@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+// Dynamic title handling
 const Contact = () => {
     useEffect(() => {
         document.title = 'FormulaIUT | Contact Us';
@@ -13,6 +14,7 @@ const Contact = () => {
                 </h2>
 
                 <div className='flex flex-col max-w-11/12 mx-auto md:flex-row items-stretch justify-between gap-10 md:gap-30'>
+                    {/* Google map iframe */}
                     <div className='w-full md:w-1/2 h-72 sm:h-80 md:h-auto md:min-h-105'>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2168.132013167695!2d90.37861788975894!3d23.94810040791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4abf8334fb1%3A0xbb003124c3dedc91!2sIslamic%20University%20of%20Technology!5e0!3m2!1sen!2sbd!4v1771001910700!5m2!1sen!2sbd"
@@ -24,6 +26,8 @@ const Contact = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
+
+                    {/* Let's get in touch */}
                     <div className='w-full md:w-1/2'>
                         <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
                             <div className="card-body">
@@ -43,7 +47,6 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
