@@ -6,7 +6,16 @@ import { MdEmail } from 'react-icons/md';
 const Footer = () => {
     return (
         <div>
-            <div className="bg-[#024644] text-neutral-content py-10">
+            {/* Vector Background image */}
+            <div
+                className="bg-[#024644] text-neutral-content py-10"
+                style={{
+                    backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400' fill='none'><circle cx='650' cy='-50' r='200' fill='%23003a39' fill-opacity='0.35'/><circle cx='-50' cy='350' r='220' fill='%23003534' fill-opacity='0.35'/><path d='M0 260C180 220 320 320 520 300C660 290 720 250 800 230V400H0Z' fill='%23003f3d' fill-opacity='0.4'/></svg>\")",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover"
+                }}
+            >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-10xl flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
 
                     {/* Contact Us Section */}
